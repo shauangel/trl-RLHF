@@ -38,6 +38,7 @@ class MyRLHFModel:
 
     # Load Custom dataset (sm: 50 records, md: 250 records, lg: 1000 records)
     def load_data(self, filename: str):
+        print(filename)
         self.ds = load_dataset("json", data_files=filename, split="train")
         self.ds = self.ds.remove_columns("response")
 
@@ -62,4 +63,4 @@ class MyRLHFModel:
 
 if __name__ == "__main__":
     test = MyRLHFModel()
-    test.setTrainer()
+    # test.setTrainer()
