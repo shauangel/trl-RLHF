@@ -62,4 +62,4 @@ class MyRLHFModel:
 
 if __name__ == "__main__":
     test = MyRLHFModel()
-    print(test.ds)
+    test.setTrainer()
